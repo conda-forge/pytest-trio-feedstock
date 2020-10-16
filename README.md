@@ -5,11 +5,13 @@ Home: https://github.com/python-trio/pytest-trio
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-trio-feedstock/blob/master/LICENSE.txt)
 
 Summary: This is a pytest plugin to help you test projects that use Trio, a friendly library for concurrency and async I/O in Python
 
+Development: https://github.com/python-trio/pytest-trio
 
+Documentation: https://pytest-trio.readthedocs.io
 
 Current build status
 ====================
