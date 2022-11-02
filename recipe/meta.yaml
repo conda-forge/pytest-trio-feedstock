@@ -1,5 +1,5 @@
 {% set name = "pytest-trio" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c01b741819aec2c419555f28944e132d3c711dae1e673d63260809bf92c30c31
+  sha256: 8363db6336a79e6c53375a2123a41ddbeccc4aa93f93788651641789a56fb52e
 
 build:
   number: 0
@@ -16,14 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
   run:
-    - python >=3.5
-    - pytest >=3.6
-    - trio >=0.15.0
-    - async_generator >=1.9
-    - outcome
+    - python >=3.7
+    - pytest >=7.2.0
+    - trio >=0.22.0
+    - outcome >=1.1.0
 
 test:
   imports:
