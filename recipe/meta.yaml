@@ -6,25 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8363db6336a79e6c53375a2123a41ddbeccc4aa93f93788651641789a56fb52e
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pytest >=7.2.0
-    - trio >=0.22.0
+    - trio >=0.25.1
     - outcome >=1.1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pytest_trio
 
