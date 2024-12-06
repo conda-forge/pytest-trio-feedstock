@@ -22,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - pytest >=7.2.0
-    - trio >=0.22.0
+    - trio >=0.25.1
     - outcome >=1.1.0
 
 test:
